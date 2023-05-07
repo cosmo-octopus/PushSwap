@@ -6,7 +6,7 @@
 /*   By: hbalasan <hbalasan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 16:21:15 by hbalasan          #+#    #+#             */
-/*   Updated: 2023/05/07 16:21:18 by hbalasan         ###   ########.fr       */
+/*   Updated: 2023/05/07 18:12:47 by hbalasan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,29 +83,29 @@ void	do_command(t_list **a, t_list **b, char *line)
 		swap_stacks(a, b);
 }
 
-int	input_valid(char *line)
+int	input_valid(char *l)
 {
-	if (line[0] == 'p' && line[1] == 'a')
+	if (l[0] == 'p' && l[1] == 'a' && l[2] == '\n')
 		return (1);
-	else if (line[0] == 'p' && line[1] == 'b')
+	else if (l[0] == 'p' && l[1] == 'b' && l[2] == '\n')
 		return (1);
-	else if (line[0] == 's' && line[1] == 'a')
+	else if (l[0] == 's' && l[1] == 'a' && l[2] == '\n')
 		return (1);
-	else if (line[0] == 's' && line[1] == 'b')
+	else if (l[0] == 's' && l[1] == 'b' && l[2] == '\n')
 		return (1);
-	else if (line[0] == 'r' && line[1] == 'a')
+	else if (l[0] == 'r' && l[1] == 'a' && l[2] == '\n')
 		return (1);
-	else if (line[0] == 'r' && line[1] == 'b')
+	else if (l[0] == 'r' && l[1] == 'b' && l[2] == '\n')
 		return (1);
-	else if (line[0] == 'r' && line[1] == 'r' && line[2] == 'a')
+	else if (l[0] == 'r' && l[1] == 'r' && l[2] == 'a' && l[3] == '\n')
 		return (1);
-	else if (line[0] == 'r' && line[1] == 'r' && line[2] == 'b')
+	else if (l[0] == 'r' && l[1] == 'r' && l[2] == 'b' && l[3] == '\n')
 		return (1);
-	else if (line[0] == 'r' && line[1] == 'r' && line[2] == 'r')
+	else if (l[0] == 'r' && l[1] == 'r' && l[2] == 'r' && l[3] == '\n')
 		return (1);
-	else if (line[0] == 'r' && line[1] == 'r')
+	else if (l[0] == 'r' && l[1] == 'r' && l[2] == '\n')
 		return (1);
-	else if (line[0] == 's' && line[1] == 's')
+	else if (l[0] == 's' && l[1] == 's' && l[2] == '\n')
 		return (1);
 	return (0);
 }
@@ -123,7 +123,7 @@ void	get_command(t_list **a, t_list **b)
 		if (!input_valid(line))
 		{
 			write(2, "Error\n", 6);
-			exit(0);
+			exit(1);
 		}
 		do_command(a, b, line);
 		free(line);

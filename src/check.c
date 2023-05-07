@@ -6,7 +6,7 @@
 /*   By: hbalasan <hbalasan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 16:20:27 by hbalasan          #+#    #+#             */
-/*   Updated: 2023/05/07 16:20:33 by hbalasan         ###   ########.fr       */
+/*   Updated: 2023/05/07 18:19:43 by hbalasan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	ft_error(void)
 {
 	write(2, "Error\n", 6);
-	return (0);
+	return (1);
 }
 
 int	twin_check(int *arr, int size)
@@ -58,9 +58,8 @@ int	check_arg(char *arg)
 	char	**str;
 
 	str = ft_split(arg, ' ');
-	i = 0;
-	j = 0;
-	while (str[i])
+	i = -1;
+	while (str[++i])
 	{
 		j = 0;
 		if ((str[i][j] == '+' || str[i][j] == '-') && str[i][j + 1])
@@ -74,9 +73,10 @@ int	check_arg(char *arg)
 			}
 			j++;
 		}
-		i++;
 	}
 	ft_free(str);
+	if (i == 0)
+		exit(0);
 	return (i);
 }
 
