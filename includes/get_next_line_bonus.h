@@ -6,7 +6,7 @@
 /*   By: hbalasan <hbalasan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 16:23:21 by hbalasan          #+#    #+#             */
-/*   Updated: 2023/05/07 16:23:23 by hbalasan         ###   ########.fr       */
+/*   Updated: 2023/05/22 20:26:36 by hbalasan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@
 # include <stdlib.h>
 # include <fcntl.h>
 # include <limits.h>
+# include "checker_bonus.h"
 
 char	*get_next_line(int fd);
 char	*ft_read_and_save(int fd, char *buffer);

@@ -6,7 +6,7 @@
 /*   By: hbalasan <hbalasan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 16:23:27 by hbalasan          #+#    #+#             */
-/*   Updated: 2023/05/07 16:23:30 by hbalasan         ###   ########.fr       */
+/*   Updated: 2023/05/22 20:07:50 by hbalasan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,10 @@
 # define PUSH_SWAP_H
 
 # include <stdio.h>
-# include "get_next_line_bonus.h"
+# include <unistd.h>
+# include <stdlib.h>
+# include <fcntl.h>
+# include <limits.h>
 
 typedef struct s_list
 {

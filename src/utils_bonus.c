@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   check.c                                            :+:      :+:    :+:   */
+/*   utils_bonus.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hbalasan <hbalasan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 16:20:27 by hbalasan          #+#    #+#             */
-/*   Updated: 2023/05/22 20:07:16 by hbalasan         ###   ########.fr       */
+/*   Updated: 2023/05/27 20:04:12 by hbalasan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/push_swap.h"
+#include "../includes/checker_bonus.h"
 
 int	ft_error(void)
 {
@@ -78,20 +78,4 @@ int	check_arg(char *arg)
 	if (i == 0)
 		exit(0);
 	return (i);
-}
-
-int	check_if_sorted(int *arr, int arg_count)
-{
-	int	i;
-
-	i = 0;
-	while (i + 1 < arg_count)
-	{
-		if (arr[i] < arr[i + 1])
-			i++;
-		else
-			return (0);
-	}
-	free(arr);
-	return (-1);
 }

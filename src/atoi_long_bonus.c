@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   atoi_long.c                                        :+:      :+:    :+:   */
+/*   bonus_atoi_long.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hbalasan <hbalasan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 16:18:14 by hbalasan          #+#    #+#             */
-/*   Updated: 2023/05/22 20:33:58 by hbalasan         ###   ########.fr       */
+/*   Updated: 2023/05/22 19:50:00 by hbalasan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/push_swap.h"
+#include "../includes/checker_bonus.h"
 
 long	atoi_long(const char *str)
 {
