@@ -34,18 +34,6 @@ The primary algorithm used is **Radix sort**. This efficient algorithm sorts non
 
 This process is repeated for each digit, resulting in a fully sorted array.
 
-## Simplifying Numbers
-
-Since negative numbers are present in the project, numbers are simplified before sorting. Each number is assigned an index, with the smallest getting index 0, next smallest getting 1, and so on. This simplifies the range to [0, N), where N is the size of the list.
-
-Additionally, to replicate the boxes used in Radix sort, two stacks are employed, corresponding to 1s and 0s. The process is as follows:
-
-- Start from the rightmost bit.
-- If the bit of the top number in stack A is 0, perform pb (push to stack B); else, perform ra (rotate A).
-- After all numbers are processed, they are in the box corresponding to their digit.
-
-This procedure is repeated for every bit, resulting in a sorted stack A.
-
 ## Algorithm Performance
 
 The push_swap algorithm achieves:
