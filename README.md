@@ -2,8 +2,6 @@
 
 The **Push_Swap** project aims to sort a set of integers using a specific set of instructions on two stacks. This program generates a sequence of push_swap instructions to achieve the desired sorting.
 
-> :warning: **Note:** Understand all code before using it; copying without comprehension is detrimental.
-
 ## Instruction Set
 
 The following instructions are utilized for sorting:
